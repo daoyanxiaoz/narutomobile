@@ -175,14 +175,31 @@
         "threshold": 0.85,
         "action": "Click",
         "next": [
-            "get_easy_helper_without_log_on_award",
-            "[JumpBack]get_easy_helper_log_on_award",
+            "easy_helper_check_in_log_on_award",
             "[JumpBack]easy_helper_log_on_award_undone"
         ],
         "pre_delay": 0,
         "post_delay": 0,
-        "post_wait_freezes": 100,
+        "post_wait_freezes": 200,
         "focus": "[color:DeepSkyBlue]轻松助手奖励未领取[/color]"
+    },
+    "easy_helper_check_in_log_on_award": {
+        "recognition": "TemplateMatch",
+        "template": "Easy_helper/check_in_log_on.png",
+        "roi": [
+            491,
+            21,
+            177,
+            106
+        ],
+        "method": 10001,
+        "threshold": 0.95,
+        "next": [
+            "[JumpBack]get_easy_helper_log_on_award",
+            "get_easy_helper_without_log_on_award"
+        ],
+        "pre_delay": 0,
+        "post_delay": 0
     },
     "easy_helper_log_on_award_done": {
         "recognition": "TemplateMatch",
