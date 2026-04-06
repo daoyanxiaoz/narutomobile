@@ -50,7 +50,13 @@
         },
         {
             "name": "轻松助手",
-            "entry": "easy_helper"
+            "entry": "easy_helper",
+            "option": [
+                "轻松助手扫荡",
+                "秘境翻饰品牌",
+                "秘境翻忍具牌",
+                "秘境忍具每次只翻一张"
+            ]
         },
         {
             "name": "轻松季(beta)",
@@ -324,6 +330,7 @@
                 "大蛇丸试炼",
                 "打满奖励停止",
                 "打满奖励停止并领取奖励",
+                "百忍未开放时操作",
                 "百忍是否使用连点器战斗",
                 "更多玩法在开战页面开始"
             ],
@@ -561,14 +568,52 @@
                 }
             ]
         },
+        "轻松助手扫荡": {
+            "type": "switch",
+            "description": "轻松助手秘境,小队扫荡",
+            "default_case": "Yes",
+            "cases": [
+                {
+                    "name": "Yes",
+                    "pipeline_override": {
+                        "secret_realm_celebreate": {
+                            "next": [
+                                "secret_realm_celebreate",
+                                "secret_realm_celebreate_1",
+                                "easy_helper_sweep"
+                            ]
+                        },
+                        "secret_realm_celebreate_1": {
+                            "next": [
+                                "secret_realm_celebreate",
+                                "secret_realm_celebreate_1",
+                                "easy_helper_sweep"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "No",
+                    "pipeline_override": {
+                        "easy_helper_log_on_award_done": {
+                            "next": [
+                                "back_main_screen_and_stop"
+                            ]
+                        },
+                        "get_easy_helper_without_log_on_award": {
+                            "next": [
+                                "back_main_screen_and_stop"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
         "轻松季扫荡": {
             "type": "switch",
             "description": "轻松季领取扫荡卡,并扫荡",
-            "default_case": "No",
+            "default_case": "Yes",
             "cases": [
-                {
-                    "name": "No"
-                },
                 {
                     "name": "Yes",
                     "pipeline_override": {
@@ -601,6 +646,9 @@
                             ]
                         }
                     }
+                },
+                {
+                    "name": "No"
                 }
             ]
         },
@@ -2254,6 +2302,42 @@
                     "pipeline_override": {
                         "more_gameplay_hundred_ninja_gameplay": {
                             "enabled": false
+                        }
+                    }
+                }
+            ]
+        },
+        "百忍未开放时操作": {
+            "type": "select",
+            "description": "其中无限等待选项会10秒尝试静入一次",
+            "cases": [
+                {
+                    "name": "尝试其他的玩法"
+                },
+                {
+                    "name": "直接返回主界面并结束任务",
+                    "pipeline_override": {
+                        "hundred_ninja_not_open": {
+                            "next": [
+                                "back_main_screen_and_stop"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "无限等待到开放",
+                    "pipeline_override": {
+                        "hundred_ninja_not_open": {
+                            "next": [
+                                "more_gameplay_hundred_ninja_gameplay",
+                                "more_gameplay_trace_vanish",
+                                "more_gameplay_orochimaru_trial",
+                                "[JumpBack]swipe_for_select_more_gameplay",
+                                "back_main_screen_and_stop"
+                            ]
+                        },
+                        "more_gameplay_hundred_ninja_gameplay": {
+                            "post_delay": 10000
                         }
                     }
                 }
