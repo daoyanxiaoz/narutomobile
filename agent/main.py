@@ -9,7 +9,6 @@ import sys
 import json
 from pathlib import Path
 
-from utils.logger import logger
 
 # utf-8
 sys.stdout.reconfigure(encoding="utf-8")  # type: ignore
@@ -31,6 +30,8 @@ if current_script_dir.__str__() not in sys.path:
 
 VENV_NAME = ".venv"  # 虚拟环境目录的名称
 VENV_DIR = Path(project_root_dir) / VENV_NAME
+
+from utils.logger import logger
 
 
 ### 配置相关 ###
@@ -61,7 +62,7 @@ def agent(is_dev_mode=False):
             from utils.logger import change_console_level
 
             change_console_level("DEBUG")
-            logger.info("开发模式：日志等级已设置为DEBUG")
+            logger.info("开发模式:日志等级已设置为DEBUG")
 
         try:
             from maa.agent.agent_server import AgentServer
