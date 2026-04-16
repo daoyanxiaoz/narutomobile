@@ -50,6 +50,12 @@
     "no_free_headhunt": {
         "recognition": "TemplateMatch",
         "template": "Headhunt/no_free_headhunt.png",
+        "roi": [
+            646,
+            498,
+            382,
+            221
+        ],
         "pre_delay": 0,
         "post_delay": 0,
         "$doc": "因为高招有动画,所以这里不设post_wait_freezes",
@@ -61,6 +67,12 @@
     "free_headhunt_waiting": {
         "recognition": "TemplateMatch",
         "template": "Headhunt/free_headhunt.png",
+        "roi": [
+            646,
+            498,
+            382,
+            221
+        ],
         "threshold": 0.97,
         "action": "Click",
         "next": [
