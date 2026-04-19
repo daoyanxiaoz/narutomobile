@@ -458,7 +458,7 @@
         },
         "拒绝qq获取火影信息": {
             "type": "switch",
-            "description": "开启允许MAN管理qq和火影信息才会生效;在qq申请界面,拒绝qq获取火影信息",
+            "description": "开启允许MAN管理qq和火影信息才会生效;在qq申请界面,拒绝qq获取火影信息;在1280x720分辨率下不生效",
             "default_case": "No",
             "cases": [
                 {
@@ -2252,9 +2252,9 @@
             "description": "需要切换的目标社交媒体账号,子串即可,注意可能因为OCR识别不到而失败,此时输入容易识别的账号名子串",
             "inputs": [
                 {
-                    "name": "账号名",
-                    "label": "账号名",
-                    "description": "需要切换的目标账号的账号名",
+                    "name": "账号名/账号",
+                    "label": "账号名/账号",
+                    "description": "需要切换的目标账号的账号名或者账号",
                     "pipeline_type": "string",
                     "default": "MaaAutoNaruto"
                 }
@@ -2262,7 +2262,7 @@
             "pipeline_override": {
                 "switch_account_find_target_qq_account": {
                     "expected": [
-                        "{账号名}"
+                        "{账号名/账号}"
                     ]
                 }
             }

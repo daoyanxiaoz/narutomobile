@@ -290,42 +290,42 @@
         "post_delay": 500
     },
     "switch_account_switch_qq": {
-        "recognition": "TemplateMatch",
-        "template": [
-            "Switch_account/switch_qq.png",
-            "Switch_account/switch_qq_night.png"
+        "recognition": "OCR",
+        "expected": [
+            "切换账号"
         ],
         "roi": [
-            575,
-            587,
-            123,
-            54
+            353,
+            367,
+            619,
+            352
         ],
         "action": "Click",
         "next": [
             "switch_account_in_switch_qq",
             "switch_account_switch_qq"
         ],
+        "$doc": "为了适配不同分辨率只能使用文字识别",
         "pre_delay": 0,
         "post_delay": 300
     },
     "switch_account_in_switch_qq": {
-        "recognition": "TemplateMatch",
-        "template": [
-            "Switch_account/in_switch_qq.png",
-            "Switch_account/in_switch_qq_night.png"
+        "recognition": "OCR",
+        "expected": [
+            "添加账号"
         ],
         "roi": [
-            1143,
-            4,
-            136,
-            715
+            982,
+            209,
+            297,
+            510
         ],
         "next": [
             "switch_account_find_target_qq_account",
-            "swipe_for_switch_account_find_target_qq_account",
+            "[JumpBack]swipe_for_switch_account_find_target_qq_account",
             "switch_account_not_find_target_qq_account"
         ],
+        "$doc": "为了适配不同分辨率只能使用文字识别",
         "pre_delay": 0,
         "post_delay": 0
     },
@@ -348,13 +348,15 @@
         "post_delay": 200
     },
     "swipe_for_switch_account_find_target_qq_account": {
-        "recognition": "TemplateMatch",
-        "template": "Switch_account/in_switch_qq.png",
+        "recognition": "OCR",
+        "expected": [
+            "添加账号"
+        ],
         "roi": [
-            1143,
-            4,
-            136,
-            715
+            982,
+            209,
+            297,
+            510
         ],
         "action": "Swipe",
         "begin": [
@@ -369,19 +371,23 @@
             1,
             1
         ],
+        "$doc": "为了适配不同分辨率只能使用文字识别",
         "max_hit": 7,
         "duration": 150
     },
     "switch_account_not_find_target_qq_account": {
-        "recognition": "TemplateMatch",
-        "template": "Switch_account/in_switch_qq.png",
+        "recognition": "OCR",
+        "expected": [
+            "添加账号"
+        ],
         "roi": [
-            1143,
-            4,
-            136,
-            715
+            982,
+            209,
+            297,
+            510
         ],
         "action": "StopTask",
+        "$doc": "为了适配不同分辨率只能使用文字识别",
         "pre_delay": 0,
         "post_delay": 0,
         "focus": "[color:tomato]没有找到目标账号[/color]"
