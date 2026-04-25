@@ -2,6 +2,7 @@
     "liveness_award": {
         "next": [
             "liveness_award_undone",
+            "liveness_award_in_center_enter",
             "[JumpBack]back_main_screen"
         ],
         "pre_delay": 0,
@@ -38,8 +39,9 @@
             47
         ],
         "next": [
-            "[JumpBack]get_liveness_award",
-            "liveness_award_done"
+            "get_liveness_award_box_1",
+            "liveness_award_box_1_done",
+            "liveness_award_box_1_locked"
         ],
         "pre_delay": 0,
         "post_delay": 0,
@@ -89,9 +91,266 @@
         "pre_delay": 0,
         "post_delay": 0,
         "threshold": 0.9,
-        "post_wait_freezes": 500,
+        "post_wait_freezes": 300,
         "action": "Click",
         "focus": "[color:DeepSkyBlue]领取活跃度宝箱[/color]"
+    },
+    "liveness_award_box_1_done": {
+        "recognition": "TemplateMatch",
+        "template": "Liveness_award/box_1_done.png",
+        "roi": [
+            437,
+            503,
+            175,
+            138
+        ],
+        "threshold": 0.9,
+        "next": [
+            "get_liveness_award_box_2",
+            "liveness_award_box_2_done",
+            "liveness_award_box_2_locked",
+            "[JumpBack]liveness_award_background"
+        ],
+        "pre_delay": 0,
+        "post_delay": 0
+    },
+    "get_liveness_award_box_1": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "Liveness_award/award_box_10.png",
+            "Liveness_award/award_box_all.png"
+        ],
+        "roi": [
+            437,
+            503,
+            175,
+            138
+        ],
+        "threshold": 0.9,
+        "action": "Click",
+        "next": [
+            "liveness_award_box_1_done",
+            "get_liveness_award_box_1"
+        ],
+        "pre_delay": 0,
+        "post_delay": 0,
+        "post_wait_freezes": 300,
+        "focus": "[color:DeepSkyBlue]领取活跃度宝箱[/color]"
+    },
+    "liveness_award_box_2_done": {
+        "recognition": "TemplateMatch",
+        "template": "Liveness_award/box_2_done.png",
+        "roi": [
+            659,
+            503,
+            170,
+            140
+        ],
+        "threshold": 0.9,
+        "next": [
+            "get_liveness_award_box_3",
+            "liveness_award_box_3_done",
+            "liveness_award_box_3_locked",
+            "[JumpBack]liveness_award_background"
+        ],
+        "pre_delay": 0,
+        "post_delay": 0
+    },
+    "get_liveness_award_box_2": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "Liveness_award/award_box_40.png",
+            "Liveness_award/award_box_all.png"
+        ],
+        "roi": [
+            659,
+            503,
+            170,
+            140
+        ],
+        "threshold": 0.9,
+        "action": "Click",
+        "next": [
+            "liveness_award_box_2_done",
+            "get_liveness_award_box_2"
+        ],
+        "pre_delay": 0,
+        "post_delay": 0,
+        "post_wait_freezes": 300,
+        "focus": "[color:DeepSkyBlue]领取活跃度宝箱[/color]"
+    },
+    "liveness_award_box_3_done": {
+        "recognition": "TemplateMatch",
+        "template": "Liveness_award/box_3_done.png",
+        "roi": [
+            945,
+            505,
+            160,
+            138
+        ],
+        "threshold": 0.9,
+        "next": [
+            "get_liveness_award_box_4",
+            "liveness_award_box_4_done",
+            "liveness_award_box_4_locked",
+            "[JumpBack]liveness_award_background"
+        ],
+        "pre_delay": 0,
+        "post_delay": 0
+    },
+    "get_liveness_award_box_3": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "Liveness_award/award_box_80.png",
+            "Liveness_award/award_box_all.png"
+        ],
+        "roi": [
+            945,
+            505,
+            160,
+            138
+        ],
+        "threshold": 0.9,
+        "action": "Click",
+        "next": [
+            "liveness_award_box_3_done",
+            "get_liveness_award_box_3"
+        ],
+        "pre_delay": 0,
+        "post_delay": 0,
+        "post_wait_freezes": 300,
+        "focus": "[color:DeepSkyBlue]领取活跃度宝箱[/color]"
+    },
+    "liveness_award_box_4_done": {
+        "recognition": "TemplateMatch",
+        "template": "Liveness_award/box_4_done.png",
+        "roi": [
+            1098,
+            505,
+            165,
+            138
+        ],
+        "threshold": 0.9,
+        "next": [
+            "weekly_liveness_award_undone",
+            "weekly_liveness_award_done"
+        ],
+        "pre_delay": 0,
+        "post_delay": 0
+    },
+    "get_liveness_award_box_4": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "Liveness_award/award_box_100.png",
+            "Liveness_award/award_box_all.png"
+        ],
+        "roi": [
+            1098,
+            505,
+            165,
+            138
+        ],
+        "threshold": 0.9,
+        "action": "Click",
+        "next": [
+            "liveness_award_box_4_done",
+            "get_liveness_award_box_4"
+        ],
+        "pre_delay": 0,
+        "post_delay": 0,
+        "post_wait_freezes": 400,
+        "focus": "[color:DeepSkyBlue]领取活跃度宝箱[/color]"
+    },
+    "liveness_award_box_1_locked": {
+        "recognition": "TemplateMatch",
+        "template": "Liveness_award/box_1_locked.png",
+        "roi": [
+            437,
+            503,
+            175,
+            138
+        ],
+        "threshold": 0.9,
+        "action": "Click",
+        "next": [
+            "weekly_liveness_award_undone",
+            "weekly_liveness_award_done"
+        ],
+        "pre_delay": 0,
+        "post_delay": 0,
+        "post_wait_freezes": 200
+    },
+    "liveness_award_box_2_locked": {
+        "recognition": "TemplateMatch",
+        "template": "Liveness_award/box_2_locked.png",
+        "roi": [
+            659,
+            503,
+            170,
+            140
+        ],
+        "threshold": 0.9,
+        "action": "Click",
+        "next": [
+            "weekly_liveness_award_undone",
+            "weekly_liveness_award_done"
+        ],
+        "pre_delay": 0,
+        "post_delay": 0,
+        "post_wait_freezes": 200
+    },
+    "liveness_award_box_3_locked": {
+        "recognition": "TemplateMatch",
+        "template": "Liveness_award/box_3_locked.png",
+        "roi": [
+            945,
+            505,
+            160,
+            138
+        ],
+        "threshold": 0.9,
+        "action": "Click",
+        "next": [
+            "weekly_liveness_award_undone",
+            "weekly_liveness_award_done"
+        ],
+        "pre_delay": 0,
+        "post_delay": 0,
+        "post_wait_freezes": 200
+    },
+    "liveness_award_box_4_locked": {
+        "recognition": "TemplateMatch",
+        "template": "Liveness_award/box_4_locked.png",
+        "roi": [
+            1098,
+            505,
+            165,
+            138
+        ],
+        "threshold": 0.9,
+        "action": "Click",
+        "next": [
+            "weekly_liveness_award_undone",
+            "weekly_liveness_award_done"
+        ],
+        "pre_delay": 0,
+        "post_delay": 0,
+        "post_wait_freezes": 200
+    },
+    "liveness_award_background": {
+        "recognition": "TemplateMatch",
+        "template": "Liveness_award/background.png",
+        "roi": [
+            271,
+            636,
+            219,
+            83
+        ],
+        "threshold": 0.9,
+        "action": "Click",
+        "pre_delay": 0,
+        "post_delay": 0,
+        "post_wait_freezes": 200
     },
     "weekly_liveness_award_undone": {
         "recognition": "TemplateMatch",
