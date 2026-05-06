@@ -318,6 +318,7 @@
         ],
         "inverse": true,
         "next": [
+            "craft_gift_award",
             "craft_gift_award_done"
         ],
         "pre_delay": 0,
@@ -341,6 +342,100 @@
         "pre_delay": 0,
         "post_delay": 0
     },
+    "craft_gift_award": {
+        "recognition": "TemplateMatch",
+        "template": "Craft_gift/award.png",
+        "roi": [
+            1158,
+            634,
+            120,
+            85
+        ],
+        "action": "Click",
+        "method": 10001,
+        "threshold": 0.95,
+        "next": [
+            "craft_gift_in_award",
+            "craft_gift_award"
+        ],
+        "pre_delay": 0,
+        "post_delay": 0,
+        "post_wait_freezes": 200
+    },
+    "craft_gift_in_award": {
+        "recognition": "TemplateMatch",
+        "template": "Craft_gift/in_award.png",
+        "roi": [
+            392,
+            53,
+            93,
+            175
+        ],
+        "threshold": 0.9,
+        "next": [
+            "craft_gift_get_award",
+            "craft_gift_get_award_done"
+        ],
+        "pre_delay": 0,
+        "post_delay": 0,
+        "post_wait_freezes": 200
+    },
+    "craft_gift_get_award": {
+        "recognition": "TemplateMatch",
+        "template": "SharedNode/get.png",
+        "roi": [
+            716,
+            90,
+            150,
+            535
+        ],
+        "threshold": 0.9,
+        "action": "Click",
+        "next": [
+            "craft_gift_get_award_one_key",
+            "craft_gift_get_award",
+            "craft_gift_get_award_done"
+        ],
+        "pre_delay": 0,
+        "post_delay": 0,
+        "post_wait_freezes": 200
+    },
+    "craft_gift_get_award_done": {
+        "recognition": "TemplateMatch",
+        "template": "SharedNode/get.png",
+        "roi": [
+            716,
+            90,
+            150,
+            535
+        ],
+        "inverse": true,
+        "next": [
+            "back_main_screen_and_stop"
+        ],
+        "pre_delay": 0,
+        "post_delay": 0
+    },
+    "craft_gift_get_award_one_key": {
+        "recognition": "TemplateMatch",
+        "template": "SharedNode/one_key_get.png",
+        "roi": [
+            264,
+            246,
+            740,
+            375
+        ],
+        "threshold": 0.9,
+        "action": "Click",
+        "next": [
+            "craft_gift_get_award_one_key",
+            "craft_gift_get_award_done",
+            "back_main_screen_and_stop"
+        ],
+        "pre_delay": 0,
+        "post_delay": 0,
+        "post_wait_freezes": 200
+    },
     "craft_gift_award_done": {
         "recognition": "TemplateMatch",
         "template": [
@@ -352,7 +447,12 @@
             93,
             61
         ],
-        "threshold": 0.9
+        "threshold": 0.9,
+        "next": [
+            "back_main_screen_and_stop"
+        ],
+        "pre_delay": 0,
+        "post_delay": 0
     },
     "craft_gift_done": {
         "recognition": "TemplateMatch",

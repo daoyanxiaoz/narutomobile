@@ -280,7 +280,7 @@
             "weekly_liveness_award_undone",
             "weekly_liveness_award_done"
         ],
-        "pre_delay": 100,
+        "pre_delay": 300,
         "post_delay": 0,
         "post_wait_freezes": 200
     },
