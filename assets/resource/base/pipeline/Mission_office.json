@@ -185,7 +185,7 @@
         "green_mask": true,
         "next": [
             "mission_office_recommended_team",
-            "[JumpBack]mission_office_get_mission"
+            "[JumpBack]mission_office_3_advance_mission"
         ],
         "pre_delay": 0,
         "post_delay": 0,
@@ -286,7 +286,7 @@
         "green_mask": true,
         "next": [
             "mission_office_recommended_team",
-            "[JumpBack]mission_office_get_mission"
+            "[JumpBack]mission_office_3_mission"
         ],
         "pre_delay": 0,
         "post_delay": 0,
@@ -341,7 +341,7 @@
         "green_mask": true,
         "next": [
             "mission_office_recommended_team",
-            "[JumpBack]mission_office_get_mission"
+            "[JumpBack]mission_office_relation_mission"
         ],
         "pre_delay": 0,
         "post_delay": 0,
