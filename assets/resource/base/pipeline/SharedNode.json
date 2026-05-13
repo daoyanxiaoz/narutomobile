@@ -495,7 +495,8 @@
     "focus": "关闭气泡弹窗",
     "next": [
       "ensure_to_close",
-      "close_notice"
+      "close_notice",
+      "back_main_screen"
     ],
     "timeout": 4000,
     "pre_delay": 0,
