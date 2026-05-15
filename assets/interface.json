@@ -151,7 +151,7 @@
             "default_check": true
         },
         {
-            "name": "月签到和活动",
+            "name": "月签到和一乐拉面",
             "entry": "activity",
             "default_check": true
         },
@@ -195,7 +195,7 @@
             "default_check": true
         },
         {
-            "name": "周胜(连点器)",
+            "name": "决斗场(连点器)",
             "entry": "weekly_win",
             "option": [
                 "忍界指引寻找周胜",

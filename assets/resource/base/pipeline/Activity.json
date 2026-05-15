@@ -51,7 +51,8 @@
             "[JumpBack]get_ramen"
         ],
         "pre_delay": 0,
-        "post_delay": 0
+        "post_delay": 0,
+        "post_wait_freezes": 300
     },
     "has_ramen": {
         "recognition": "TemplateMatch",
@@ -94,10 +95,10 @@
             1077,
             395
         ],
+        "action": "Click",
         "pre_delay": 0,
         "post_delay": 0,
-        "post_wait_freezes": 200,
-        "action": "Click"
+        "post_wait_freezes": 200
     },
     "swipes_for_monthly_sign": {
         "action": "Swipe",
