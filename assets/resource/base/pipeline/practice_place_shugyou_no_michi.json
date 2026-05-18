@@ -351,9 +351,8 @@
             "shugyou_no_michi_go_to_war_done",
             "[JumpBack]shugyou_no_michi_loading",
             "shugyou_no_michi_in_fight",
-            "[JumpBack]shugyou_no_michi_level_teleportation",
-            "[JumpBack]shugyou_no_michi_level_award",
-            "shugyou_no_michi_go_to_war"
+            "shugyou_no_michi_go_to_war",
+            "shugyou_no_michi_try_go_to_war"
         ],
         "pre_delay": 0,
         "post_delay": 300,
