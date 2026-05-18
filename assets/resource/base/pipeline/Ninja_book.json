@@ -716,7 +716,7 @@
     },
     "get_treasure_box_award_one_key": {
         "recognition": "TemplateMatch",
-        "template": "SharedNode/one_key_get.png",
+        "template": "SharedNode/confrim.png",
         "roi": [
             363,
             335,
