@@ -1205,7 +1205,8 @@
         ],
         "action": "Click",
         "next": [
-            "mission_office_above_kage_recommended_team"
+            "mission_office_above_kage_recommended_team",
+            "mission_office_peak_3_mission"
         ],
         "pre_delay": 0,
         "post_delay": 0,
@@ -1231,7 +1232,8 @@
         ],
         "action": "Click",
         "next": [
-            "mission_office_above_kage_recommended_team"
+            "mission_office_above_kage_recommended_team",
+            "mission_office_peak_relation_mission"
         ],
         "pre_delay": 0,
         "post_delay": 0,
@@ -1257,7 +1259,8 @@
         ],
         "action": "Click",
         "next": [
-            "mission_office_above_kage_recommended_team"
+            "mission_office_above_kage_recommended_team",
+            "mission_office_mid_mission"
         ],
         "pre_delay": 0,
         "post_delay": 0,
@@ -1284,7 +1287,8 @@
         "action": "Click",
         "next": [
             "mission_office_above_kage_recommended_team",
-            "select_ninja_for_above_kage_solo_mission_by_frame"
+            "select_ninja_for_above_kage_solo_mission_by_frame",
+            "mission_office_low_mission"
         ],
         "pre_delay": 0,
         "post_delay": 0,
