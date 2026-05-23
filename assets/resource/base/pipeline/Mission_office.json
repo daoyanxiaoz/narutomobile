@@ -1121,13 +1121,32 @@
         ],
         "action": "Click",
         "next": [
+            "take_mission_office_mission_full",
             "take_mission_done",
             "mission_office_get_mission",
-            "[JumpBack]back_main_screen_and_stop"
+            "back_main_screen_and_stop"
         ],
         "pre_delay": 0,
         "post_delay": 0,
         "post_wait_freezes": 200
+    },
+    "take_mission_office_mission_full": {
+        "recognition": "OCR",
+        "expected": [
+            "请先完成",
+            "满了"
+        ],
+        "roi": [
+            261,
+            327,
+            755,
+            64
+        ],
+        "pre_delay": 0,
+        "post_delay": 0,
+        "next": [
+            "back_main_screen_and_stop"
+        ]
     },
     "mission_office_above_kage": {
         "recognition": "TemplateMatch",
@@ -1177,6 +1196,7 @@
             "[JumpBack]mission_office_peak_relation_mission",
             "[JumpBack]mission_office_mid_mission",
             "[JumpBack]mission_office_low_mission",
+            "[JumpBack]mission_office_floor_mission",
             "[JumpBack]mission_office_complete",
             "[JumpBack]above_kage_take_mission_done",
             "mission_office_gold_refresh",
@@ -1294,6 +1314,34 @@
         "post_delay": 0,
         "post_wait_freezes": 500
     },
+    "mission_office_floor_mission": {
+        "recognition": "TemplateMatch",
+        "template": "Mission_office/floor_award.png",
+        "roi": [
+            755,
+            202,
+            488,
+            353
+        ],
+        "green_mask": true,
+        "order_by": "Score",
+        "threshold": 0.95,
+        "target_offset": [
+            304,
+            52,
+            -336,
+            -72
+        ],
+        "action": "Click",
+        "next": [
+            "mission_office_above_kage_recommended_team",
+            "select_ninja_for_above_kage_solo_mission_by_frame",
+            "mission_office_floor_mission"
+        ],
+        "pre_delay": 0,
+        "post_delay": 0,
+        "post_wait_freezes": 500
+    },
     "select_ninja_for_above_kage_solo_mission_by_frame": {
         "recognition": "TemplateMatch",
         "template": "Mission_office/ninja_frame_masked.png",
@@ -1384,7 +1432,10 @@
         ],
         "action": "Click",
         "next": [
-            "take_mission_office_above_kage_mission_done"
+            "take_mission_office_mission_full",
+            "take_mission_office_above_kage_mission_done",
+            "take_mission_office_above_kage_mission",
+            "back_main_screen_and_stop"
         ],
         "pre_delay": 0,
         "post_delay": 0,
