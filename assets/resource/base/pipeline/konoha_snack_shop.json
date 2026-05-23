@@ -114,17 +114,17 @@
             "Konoha_snack_shop/hashirma.png"
         ],
         "roi": [
-            249,
-            78,
-            992,
-            259
+            162,
+            95,
+            1117,
+            222
         ],
         "action": "Click",
         "target_offset": [
-            20,
-            350,
-            -5,
-            30
+            37,
+            373,
+            -32,
+            -47
         ],
         "next": [
             "konoha_snack_shortage",
@@ -142,17 +142,17 @@
             "Konoha_snack_shop/peak.png"
         ],
         "roi": [
-            164,
-            145,
-            898,
-            145
+            162,
+            95,
+            1117,
+            222
         ],
         "action": "Click",
         "target_offset": [
-            200,
-            330,
-            30,
-            5
+            -125,
+            354,
+            0,
+            -10
         ],
         "next": [
             "konoha_snack_shortage",
@@ -170,17 +170,17 @@
             "Konoha_snack_shop/low.png"
         ],
         "roi": [
-            164,
-            145,
-            898,
-            145
+            162,
+            95,
+            1117,
+            222
         ],
         "action": "Click",
         "target_offset": [
-            200,
-            330,
-            30,
-            5
+            -128,
+            351,
+            10,
+            0
         ],
         "next": [
             "konoha_snack_shortage",
@@ -198,17 +198,17 @@
             "Konoha_snack_shop/mid.png"
         ],
         "roi": [
-            164,
-            145,
-            898,
-            145
+            162,
+            95,
+            1117,
+            222
         ],
         "action": "Click",
         "target_offset": [
-            200,
-            330,
-            30,
-            5
+            -128,
+            353,
+            5,
+            -5
         ],
         "next": [
             "konoha_snack_shortage",
