@@ -881,12 +881,15 @@
             "club_first_award_done",
             "[JumpBack]club_first_award",
             "naruto_club_in_loop_wheel",
+            "benefit_station",
             "[JumpBack]club_first_award_on_error"
         ],
         "inverse": true,
         "focus": "[color:DeepSkyBlue]检测任务是否已经全部提交[/color]",
         "timeout": 10000,
-        "on_error": "try_esc"
+        "on_error": [
+            "try_esc"
+        ]
     },
     "club_submit": {
         "recognition": "TemplateMatch",
